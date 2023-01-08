@@ -1276,21 +1276,33 @@ def ouo(url):
 # mdisk
 
 def mdisk(url):
-    api = "https://api.emilyx.in/api"
+    
     client = cloudscraper.create_scraper(allow_brotli=False)
-    resp = client.get(url)
-    if resp.status_code == 404:
-        return "File not found/The link you entered is wrong!"
-    try:
-        resp = client.post(api, json={"type": "mdisk", "url": url})
-        res = resp.json()
-    except BaseException:
-        return "API UnResponsive / Invalid Link !"
-    if res["success"] is True:
-        return res["url"]
-    else:
-        return res["msg"]
+    
+    
+    DOMAIN = "https://mdisk.pro"
 
+    ref = "https://m.meclipstudy.in/"
+    
+    h = {"referer": ref}
+  
+    resp = client.get(url,headers=h)
+    
+    soup = BeautifulSoup(resp.content, "html.parser")
+    
+    inputs = soup.find_all("input")
+   
+    data = { input.get('name'): input.get('value') for input in inputs }
+
+    h = { "x-requested-with": "XMLHttpRequest" }
+    
+    time.sleep(8)
+    r = client.post(f"{DOMAIN}/links/go", data=data, headers=h)
+    try:
+        return r.json()['url']
+    except: return "Something went wrong :("
+
+print(mdisk(url))
 
 ###################################################################################################################
 # pixeldrain
@@ -1727,6 +1739,11 @@ def shortners(url):
     elif "https://urlsopen.net/" in url:
         print("entered urlsopen:",url)
         return urlsopen(url)
+
+    # mdisk
+    elif "https://mdisk.pro/" in url:
+        print("entered Mdisk.pro:",url)
+        return mdisk(url)
 
     # xpshort
     elif "https://xpshort.com/" in url or "https://push.bdnewsx.com/" in url or "https://techymozo.com/" in url:
