@@ -601,6 +601,9 @@ def katdrive_dl(url,katcrypt):
     info_parsed['src_url'] = url
     return info_parsed['gdrive_url']
 
+def tinyurl_bypass(tinyurl_url: str) -> str:
+	response = requests.get(tinyurl_url).url
+	return response
 
 ###############################################
 # hubdrive
