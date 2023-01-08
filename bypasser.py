@@ -1741,9 +1741,21 @@ def shortners(url):
         print("entered urlsopen:",url)
         return urlsopen(url)
 
+    elif "https://urlsopen.com/" in url:
+        print("entered urlsopen:",url)
+        return urlsopen(url)
+
     # mdisk
     elif "https://mdisk.pro/" in url:
         print("entered Mdisk.pro:",url)
+        return mdisk(url)
+
+    elif "https://mdiskshortner.link/" in url:
+        print("entered Mdisk:",url)
+        return mdisk(url)
+
+    elif "https://mdisklink.link/" in url:
+        print("entered Mdisk:",url)
         return mdisk(url)
 
     # xpshort
