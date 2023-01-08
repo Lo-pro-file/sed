@@ -1305,8 +1305,6 @@ def mdisk(url):
         return r.json()['url']
     except: return "Something went wrong :("
 
-print(mdisk(url))
-
 ###################################################################################################################
 # pixeldrain
 
