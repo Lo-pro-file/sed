@@ -1600,6 +1600,42 @@ def adrinolink (url):
     try: return r.json()['url']
     except: return "Something went wrong :("
 
+#####################################################################################################        
+# tnlink
+
+def tnlink(url):
+    
+    client = requests.session()
+    
+    
+    DOMAIN = "https://gadgets.usanewstoday.club"
+
+    url = url[:-1] if url[-1] == '/' else url
+
+    code = url.split("/")[-1]
+    
+    final_url = f"{DOMAIN}/{code}"
+    
+    ref = "https://usanewstoday.club/"
+    
+    h = {"referer": ref}
+  
+    resp = client.get(final_url,headers=h)
+    
+    soup = BeautifulSoup(resp.content, "html.parser")
+    
+    inputs = soup.find_all("input")
+   
+    data = { input.get('name'): input.get('value') for input in inputs }
+
+    h = { "x-requested-with": "XMLHttpRequest" }
+    
+    time.sleep(8)
+    r = client.post(f"{DOMAIN}/links/go", data=data, headers=h)
+    try:
+        return r.json()['url']
+    except: return "Something went wrong :("
+
 
 #####################################################################################################        
 # helpers
@@ -1783,6 +1819,11 @@ def shortners(url):
         print("entered adrinolink:",url)
         return adrinolink(url)
         
+    # tnlink
+    elif "https://link.tnlink.in/" in url:
+        print("entered tnlink:",url)
+        return tnlink(url)
+
     # htpmovies sharespark cinevood
     elif "https://htpmovies." in url or 'https://sharespark.me/' in url or "https://cinevood." in url or "https://atishmkv." in url \
         or "https://teluguflix" in url or 'https://taemovies' in url or "https://toonworld4all" in url or "https://animeremux" in url:
