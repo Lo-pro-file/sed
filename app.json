@@ -2,8 +2,8 @@
     "name": "Bypass Bot",
     "description": "Bypass Bot that can Bypass Ad Links and Generate Direct Links",
     "stack": "container",
-    "website": "https://github.com/bipinkrish/Link-Bypasser-Bot",
-    "repository": "https://github.com/bipinkrish/Link-Bypasser-Bot",
+    "website": "https://github.com/angel-loveyou/sed",
+    "repository": "https://github.com/angel-loveyou/sed",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
@@ -33,7 +33,7 @@
     "formation": {
         "worker": {
             "quantity": 1,
-            "size": "free"
+            "size": "eco"
         }
     }
 }
