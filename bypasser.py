@@ -20,13 +20,13 @@ import os
 ##########################################################
 # ENVs
 
-GDTot_Crypt = os.environ.get("CRYPT","b0lDek5LSCt6ZjVRR2EwZnY4T1EvVndqeDRtbCtTWmMwcGNuKy8wYWpDaz0%3D")
-Laravel_Session = os.environ.get("Laravel_Session","")
-XSRF_TOKEN = os.environ.get("XSRF_TOKEN","")
-DCRYPT = os.environ.get("DRIVEFIRE_CRYPT","")
-KCRYPT = os.environ.get("KOLOP_CRYPT","aWFicnVaNWh4TThRbzFqdkE2U2FKNmJOTWhvWkZmbWswaUFadTB5NXJ3RT0%3D")
-HCRYPT = os.environ.get("HUBDRIVE_CRYPT","Q29hdlpLUEZTSEJLUjVZRkZQSExLODFuWGVudUlNK0ZPZlZmS1hENWxZVT0%3D")
-KATCRYPT = os.environ.get("KATDRIVE_CRYPT","")
+GDTot_Crypt = os.environ.get("CRYPT","cDFCSStZVTlBYVhRemlCNmhoVHg0ZDVmS3V4Q0lDcEw2akgwN2kvMnl2ND0%3D")
+Laravel_Session = os.environ.get("Laravel_Session","eyJpdiI6Im5qbnlIOGZZRlwvZUs5WEJBM2FKR0xBPT0iLCJ2YWx1ZSI6IjVaWXBkR1NlTjdTMzF0K1B0eXNoSVlRSms4TmdNekw3U0t3RTZQellhdXVMSkt4NXk1amtJNXc5YzJKNURrbWUiLCJtYWMiOiIwM2YyYmE5MjFlMWZkMjAxYThjNmVjYjhlOTRiMDk3NjgyYTJkNjdlMTAzYTcxZGIzMjIzYTcxNWI3ODRhNjY2In0%3D")
+XSRF_TOKEN = os.environ.get("XSRF_TOKEN","eyJpdiI6IjFDbHJaMzByN01neUNnTVEranhZY2c9PSIsInZhbHVlIjoidXNFQzBpQVlwZkhMUm1wd04waXlheG94MngyUjRxREtOQUxhVjVCdjd4SXZ3WHBMczhmNG9NdEUxKzQ5WkZIaiIsIm1hYyI6IjJkNWRkN2FiMGYzNDRiZDRkNmMzZWJhNjMxNjZkMjM2NWY1ZmM1MjFkNjQxNDg2MmQzNmU0Njg2NmM1NzhiZDkifQ%3D%3D")
+DCRYPT = os.environ.get("DRIVEFIRE_CRYPT","cTM5M1hNbGxpQVpKM3pHdnBXQW5sY0RibldacWVGYit5SUNQRGZOMlYzcz0%3D")
+KCRYPT = os.environ.get("KOLOP_CRYPT","WW9rQUNKNW00d0VKaFVSaDVKSEUrdkxIQ3BlbEFnNUt5eVpHbENINllzdz0%3D")
+HCRYPT = os.environ.get("HUBDRIVE_CRYPT","TmppSkR5c1U3OFlkUEVzbkUrY0VXOW5OZFdTMFZ3bDVzMlBROU1nMFBydz0%3D")
+KATCRYPT = os.environ.get("KATDRIVE_CRYPT","d3hpZVlSRVpWeWxDdzA2cjRmOWd4UTFKL3BVMmd4KzBIcHNWOWU2eGJkbz0%3D")
 
 
 ############################################################
