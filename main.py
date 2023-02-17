@@ -12,9 +12,9 @@ from bypasser import ddllist
 
 
 # bot
-bot_token = os.environ.get("TOKEN", "")
-api_hash = os.environ.get("HASH", "") 
-api_id = os.environ.get("ID", "")
+bot_token = os.environ.get("TOKEN", "5938759891:AAGaPtPBxQmqfoXuggnRQCXR5_vmv3sap18")
+api_hash = os.environ.get("HASH", "96089a340f2892fd06aea683cbfb73c0") 
+api_id = os.environ.get("ID", "1701392")
 app = Client("my_bot",api_id=api_id, api_hash=api_hash,bot_token=bot_token)  
 
 
@@ -53,8 +53,8 @@ def loopthread(message):
 # start command
 @app.on_message(filters.command(["start"]))
 def send_start(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
-    app.send_message(message.chat.id, f"__👋 Hi **{message.from_user.mention}**, i am Link Bypasser Bot, just send me any supported links and i will you get you results.\nCheckout /help to Read More__",
-    reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("🌐 Source Code", url="https://t.me/movies_halt_owner_bot")]]), reply_to_message_id=message.id)
+    app.send_message(message.chat.id, f"__👋 Hi SED **{message.from_user.mention}**, i am ANGEL X Op Bypasser Bot, just send me any supported links and i will you get you results.\nCheckout /help to Read More__",
+    reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("🌐 WD Zone", url="https://t.me/Opleech")]]), reply_to_message_id=message.id)
 
 
 # help command
