@@ -20,7 +20,7 @@ import os
 ##########################################################
 # ENVs
 
-GDTot_Crypt = os.environ.get("CRYPT","cDFCSStZVTlBYVhRemlCNmhoVHg0ZDVmS3V4Q0lDcEw2akgwN2kvMnl2ND0%3D")
+GDTot_Crypt = os.environ.get("CRYPT","Q2tySnk3MHBIcWhYZTVRVXR3Y0hVcW5LR0NOYUgySnBKV3hkQ3JOUE4vTT0%3D")
 Laravel_Session = os.environ.get("Laravel_Session","eyJpdiI6Im5qbnlIOGZZRlwvZUs5WEJBM2FKR0xBPT0iLCJ2YWx1ZSI6IjVaWXBkR1NlTjdTMzF0K1B0eXNoSVlRSms4TmdNekw3U0t3RTZQellhdXVMSkt4NXk1amtJNXc5YzJKNURrbWUiLCJtYWMiOiIwM2YyYmE5MjFlMWZkMjAxYThjNmVjYjhlOTRiMDk3NjgyYTJkNjdlMTAzYTcxZGIzMjIzYTcxNWI3ODRhNjY2In0%3D")
 XSRF_TOKEN = os.environ.get("XSRF_TOKEN","eyJpdiI6IjFDbHJaMzByN01neUNnTVEranhZY2c9PSIsInZhbHVlIjoidXNFQzBpQVlwZkhMUm1wd04waXlheG94MngyUjRxREtOQUxhVjVCdjd4SXZ3WHBMczhmNG9NdEUxKzQ5WkZIaiIsIm1hYyI6IjJkNWRkN2FiMGYzNDRiZDRkNmMzZWJhNjMxNjZkMjM2NWY1ZmM1MjFkNjQxNDg2MmQzNmU0Njg2NmM1NzhiZDkifQ%3D%3D")
 DCRYPT = os.environ.get("DRIVEFIRE_CRYPT","cTM5M1hNbGxpQVpKM3pHdnBXQW5sY0RibldacWVGYit5SUNQRGZOMlYzcz0%3D")
