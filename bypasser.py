@@ -352,7 +352,7 @@ def scrappers(link):
                   result = resub(r'(?m)^\(https://i.*', '', next_s)
                   star = resub(r'(?m)^\*.*', ' ', result)
                   extra = resub(r'(?m)^\(https://e.*', ' ', star)
-                  gd_txt += ', '.join(findall(r'(?m)^.*https://new1.gdtot.cfd/file/[0-9][^.]*', next_s)) + "\n\n"
+                  gd_txt += ', '.join(findall(r'(?m)^.*https://new6.gdtot.cfd//file/[0-9][^.]*', next_s)) + "\n\n"
         return gd_txt
   
     elif "htpmovies" in link and "/exit.php" in link:
@@ -592,7 +592,7 @@ def olamovies(url):
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
             'Accept-Language': 'en-US,en;q=0.5',
             'Referer': url,
-            'Alt-Used': 'olamovies.ink',
+            'Alt-Used': 'olamovies.world',
             'Connection': 'keep-alive',
             'Upgrade-Insecure-Requests': '1',
             'Sec-Fetch-Dest': 'document',
@@ -623,7 +623,7 @@ def olamovies(url):
         soup = "None"
 
         while 'rocklinks.net' not in soup and "try2link.com" not in soup and "ez4short.com" not in soup:
-            res = client.get("https://olamovies.ink/download/", params=params, headers=headers)
+            res = client.get("https://olamovies.world//download/", params=params, headers=headers)
             soup = BeautifulSoup(res.text,"html.parser")
             soup = soup.findAll("a")[0].get("href")
             if soup != "":
