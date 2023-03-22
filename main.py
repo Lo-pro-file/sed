@@ -20,32 +20,34 @@ app = Client("my_bot",api_id=api_id, api_hash=api_hash,bot_token=bot_token)
 
 # loop thread
 def loopthread(message):
-    urls = []
-    for ele in message.text.split():
-        if "http://" in ele or "https://" in ele:
-            urls.append(ele)
-    if len(urls) == 0:
+    urls = [
+        ele
+        for ele in message.text.split()
+        if "http://" in ele or "https://" in ele
+    ]
+    if not urls:
         return
 
     if bypasser.ispresent(ddllist,urls[0]):
         msg = app.send_message(message.chat.id, "💋 __generating...__", reply_to_message_id=message.id)
+    elif urls[0] in "https://olamovies" or urls[0] in "https://psa.pm/":
+        msg = app.send_message(message.chat.id, "🔎 __this might take some time...__", reply_to_message_id=message.id)
     else:
-        if urls[0] in "https://olamovies" or urls[0] in "https://psa.pm/":
-            msg = app.send_message(message.chat.id, "🔎 __this might take some time...__", reply_to_message_id=message.id)
-        else:
-            msg = app.send_message(message.chat.id, "🔎 __bypassing...__", reply_to_message_id=message.id)
+        msg = app.send_message(message.chat.id, "🔎 __bypassing...__", reply_to_message_id=message.id)
 
     link = ""
     for ele in urls:
         if bypasser.ispresent(ddllist,ele):
             try: temp = ddl.direct_link_generator(ele)
-            except Exception as e: temp = "**Error**: " + str(e)
+            except Exception as e:
+                temp = f"**Error**: {str(e)}"
         else:    
             try: temp = bypasser.shortners(ele)
-            except Exception as e: temp = "**Error**: " + str(e)
+            except Exception as e:
+                temp = f"**Error**: {str(e)}"
         print("bypassed:",temp)
         link = link + temp + "\n\n"
-        
+
     try: app.edit_message_text(message.chat.id, msg.id, f'__{link}__', disable_web_page_preview=True)
     except: app.edit_message_text(message.chat.id, msg.id, "__Failed to Bypass__")
 
